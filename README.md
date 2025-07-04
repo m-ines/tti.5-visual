@@ -32,6 +32,17 @@ Une question que nous nous sommes demandés est la manière dont les distances e
  
 # Ewen : créer une interface graphique interactive 
 
+Je me suis intéressé en grande majorité à la création et l'adaptation de l'interface graphique pour obtenir un graphe interactif proche de celui qui nous était demandé : un graphe type "Product Space" pour relier dans notre cas les sujets de recherche et non les produits fabriqués (cf https://atlas.hks.harvard.edu/explore/productspace?exporter=country-646&importer=group-1&year=2021 pour un exemple).
 
+Les enjeux étaient surtout de bien comprendre le fonctionnement du module dash, nouveau pour nous et très utile pour permettre de donner la dimension interactive au graphe. 
+Héloïse a elle aussi manipulé dash pour générer certains premiers graphes que j'ai pu reprendre avec toute la base de données de mots clés qu'elle a générée pour élaborer le graphe final. 
 
+J'ai donc ajouter les noeuds et les arêtes, construits à partir des mots clés obtenus et de leurs liens, au graphe créé. Puis en utilisant dash, il a été possible de les représenter sur une interface qui tourne à la manière d'une app.
+J'ai ensuite beaucoup travaillé pour améliorer l'interface graphique, d'abord en ajoutant du code et notamment une partie d'actualisation selon le noeud survolé pour permettre de n'afficher que les arêtes qui sont reliées au noeud survolé et ainsi alléger le graphe. J'ai également repris le travail d'Héloïse qui avait déjà permis d'attribuer des couleurs différentes aux clusters. 
+Par la suite, il a été possible d'intégrer un bouton permettant de sélectionner un pays et un autre pour sélectionner une année (instructions ajoutées dans la partie layout de la partie dash/ app). 
+
+Grâce au travail d'Ines pour obtenir un tri des mots clés en fonction des années, des pays mais aussi des pays et années en même temps, nous avons pu intégrer des instructions qui permettent de représenter en couleurs, selon
+le cluster, les mots clés qui apparaissent dans la liste par pays et année pour le pays et l'année sélectionnés par l'utilisateur via les boutons, et en gris ceux qui n'apparaissaient pas, à la manière des graphes "Product space" exemples. 
+
+Une des grandes difficultés était de gérer le zoom et le survol des points et l'intelligence artificielle a su suggéré les outils hoverData et relayoutData qui ont permis de gérer ce problème et améliorer nettement l'interactivité.
 # Ines : Analyser la recherche par pays 
