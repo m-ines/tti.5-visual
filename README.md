@@ -26,9 +26,15 @@ Comme cette méthode ne marchait pas, j'ai fait quelques recherches supplémenta
 
 Viens maintenant la partie Dash. Après avoir pris connaissance du module, j'ai essayé de tracer les mots en bulles avec le rayon que j'avais déterminé percédemment et les liens entre les mots avec des arrêtes. C'est ainsi un graphe non orienté que nous obtenons. Je coloris aussi les clusters de mots avec des couleurs différentes pour réperer les relation directes entre les mots. 
 
-# Loïc : Analyser la manière de regrouper les points en clusters 
+# Loïc : Analyser les méthodes de représentation des données en 2D
 
-Une question que nous nous sommes demandés est la manière dont les distances entre les mots étaient représentées avecDash. Nous avions le s entiment d'un flou derrière la représentation, un peu opaque mathématiquement. J'ai donc chercher différentes manières de représenter les proximités entre les mots pour que les distances sur le graphe traduisent bien les distances sémantiques. 
+Je me suis pour ma part concentré sur les données envoyés pour essayer de les appréhender et de les représenter.
+
+Après les avoir rendues utilisables, une question que nous nous sommes posés est comment présenter efficacement des données sur un plan 2D en considérant en entrée une matrice de distance entre paires de points (ou de proximité). 
+
+J'ai tout d'abord essayé d'implémenter moi-même une solution à ce problème, qui correspond à minimiser la différence entre les distances théoriques de la matrices et celles représentées sur le plan. J'ai fini par abandonner cette idée, la fonction à minimiser ne présentant certains critères nécessaires au bon fonctionnement de la plupart des algo de minimisation- notamment la convexité. 
+
+Je suis donc passé par l'utilisation de différentes libraires et algorithmes pré-implémentés de représentation en 2D depuis une matrice de distance. L'idée était de comparer les différences de ceux-ci et d'observer comment les clusters se formaient. C'est l'objet de Optim50. Je me rends compte que la méthode de Fruchterman-Reingold est la plus utilisée et celle qui semble la plus adaptée. Comme l'algorithme conçu pour les données personnalisées utilise également celui-ci, j'ai tenté d'adapter le code pour obtenir l'interface graphique associé aux topics. C'est ce que j'ai commencé à faire dans graph_topics. Je n'ai malheuresment pas eu le temps de finir, cela nécessitant un certain travail de déconstruire et réadapter le code fonctionnel à des données différentes. 
  
 # Ewen : créer une interface graphique interactive 
 
