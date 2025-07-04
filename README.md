@@ -4,9 +4,12 @@
 
 L'objectif de notre projet est de fournir une interface interractive permettant de visualiser graphiquement les liens entre les thèmes importants de la recherche scientifique sur l'électrification des transports. Nous nous inspirons donc d'un graphique d'Harvard : https://atlas.hks.harvard.edu/explore/productspace?exporter=country-250 
 
-Il permet de visualiser des cluster sémantiques de mots et les liens entre les idées co-occurentes. Nous disposons donc d'un fichier csv contenant les titres de nombreux articles scientifiques sur l'électrification et d'un notebook fournis pas notre encadrant. Le notebook nous donne quelques graphiques intermédiaires pour tracer les liens entre 50 idées. Ils e sont cependant pas interactifs. On utilise également 50 idées les plus importantes déjà extraites par une IA. 
+Il permet de visualiser des cluster sémantiques de mots et les liens entre les idées co-occurentes. Nous disposons donc d'un fichier csv contenant les titres de nombreux articles scientifiques sur l'électrification et d'un notebook fournis pas notre encadrant. Le notebook nous donne quelques graphiques intermédiaires pour tracer les liens entre 50 idées. Ils ne sont cependant pas interactifs. On utilise également 50 idées les plus importantes déjà extraites par une IA. 
 
-Nous avons donc séparer les membres du groupe sur différents objectifs afin de reprendre et de nous approprier complètement le sujet.
+Nous avons donc séparé les membres du groupe sur différents objectifs afin de reprendre et de nous approprier complètement le sujet.
+
+L'interface graphique la plus aboutie basée sur des données que nous avons nous-mêmes générées se trouve dans Projet_final.ipynb. 
+Différentes représentations tests des données sur les topics se trouvent dans Optim50.ipynb.
 
 # Héloïse : Chercher à extraire les idées importantes des articles sans faire appel à une IA.
 
