@@ -35,3 +35,25 @@ Une question que nous nous sommes demandés est la manière dont les distances e
 
 
 # Ines : Analyser la recherche par pays 
+
+Pour exploiter le tri de mots clefs effectué par Héloïse et afin qu'Ewen puisse plot le graphique interactif, il faut faire un tri sur le dataframe pour spécifier les mots clés qui apparaissent par pays et/ou par année. 
+
+Pour ce faire, keywords_per_country retourne une liste des mots clefs par pays, avec répétition, et les mots clés sont des mots composés (par exemple "electric vehicle" correspond au même mot clef).
+
+De même, keywords_per_year retourne une liste des mots clefs par année, avec répétition, et les mots clés sont des mots composés (par exemple "electric vehicle" correspond au même mot clef).
+
+Enfin, keywords_per_country_year retourne une liste des mots clefs pour une année et un pays, avec répétition, et les mots clés sont des mots composés (par exemple "electric vehicle" correspond au même mot clef).
+
+Pour correspondre à la liste de mots clefs d'Heloïse, on utilise keywords_split, qui sépare les différentes composantes d'un mot clef : "electric vehicle" devient "electric" d'une part, et "vehicle" de l'autre
+
+filtered_keywords filtre quels mots sont dans la liste de mots principaux d'Heloïse, pour ne retenir que les mots principaux
+
+sans_doublons est assez explicite, elle enlève les doublons dans la liste de mots clefs
+
+On compose toutes ces petites opérations en une grande fonction, country pour les pays, year pour les années, country_&_year pour l'intersection pays et année
+
+Ewen dispose donc en fin de travail de ces trois fonctions pour faire le tri pour ses graphiques.
+
+
+
+
